@@ -32,10 +32,9 @@ We used a **Random Forest classifier**, chosen for its high accuracy (**83% on t
 
 Visit this repository to:
 
-- 📁 Explore the model code and dataset  
-- 📉 View feature importance plots  
-- 🧪 Test the model using mock data  
-- ⚙️ Access API-ready endpoints for integration (coming soon)  
+- 📁 Explore the model code and dataset
+- 🧪 Test the model using mock data
+- ⚙️ Access API-ready endpoints for integration (coming soon)
 - 📘 Read about ethical considerations and limitations
 
 The project also includes:
