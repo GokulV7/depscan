@@ -4,8 +4,7 @@ library(caret)
 library(randomForest)
 
 # Load Data
-df <- read.csv("student_depression_dataset.csv", stringsAsFactors = TRUE)
-str(df)
+df <- read.csv("C:/Users/gokul/Downloads/student_depression_dataset.csv", stringsAsFactors = TRUE)
 summary(df)
 
 df <- df %>% select(-id)
@@ -29,7 +28,7 @@ test <- df[-train_index, ]
 # Random Forest Model
 set.seed(123)
 rf_model <- randomForest(Depression ~ ., data = train,
-                         importance = TRUE, ntree = 100)
+                         importance = TRUE, ntree = 500)
 
 # Model summary
 print(rf_model)
