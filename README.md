@@ -12,7 +12,7 @@ The model is trained on **27,901 anonymized student records**, with features cov
 - **Lifestyle habits** (e.g., sleep hours, phone usage)  
 - **Mental health indicators** (e.g., suicidal thoughts, anxiety, family history of mental illness)
 
-We used a **Random Forest classifier**, chosen for its high accuracy (**83% on test data**) and interpretability. The `MeanDecreaseGini` scores provide transparency into which features most influence the model's predictions, helping educators and counselors build trust in the system.
+We used a **Random Forest classifier**, chosen for its high accuracy (**83% on test data**) and interpretability.
 
 > **Note:** The dataset represents Indian student populations, which makes cultural context important. Future versions should validate across global populations for generalizability.
 
@@ -23,7 +23,7 @@ We used a **Random Forest classifier**, chosen for its high accuracy (**83% on t
 - **Input Type:** Structured survey-like fields (non-invasive)  
 - **Model Type:** Random Forest (tuned `ntree=1000`, optimized `mtry`)  
 - **Accuracy:** ~83% test accuracy  
-- **Outputs:** Depression classification (`Yes` / `No`), feature importance scores  
+- **Outputs:** Depression classification (`Yes` / `No`) 
 - **File:** `studep_rf_model.R` — includes preprocessing, model training, and evaluation  
 
 ---
