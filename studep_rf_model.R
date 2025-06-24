@@ -27,8 +27,21 @@ test <- df[-train_index, ]
 
 # Random Forest Model
 set.seed(123)
+tune_result <- tuneRF(train[,-ncol(train)], train$Depression,
+                      stepFactor = 1.5,
+                      improve = 0.01,
+                      ntreeTry = 1000,
+                      trace = TRUE,
+                      plot = TRUE)
+
+# Use best mtry
+best_mtry <- tune_result[which.min(tune_result[,2]), 1]
+
+# Train the model
 rf_model <- randomForest(Depression ~ ., data = train,
-                         importance = TRUE, ntree = 500)
+                         ntree = 1000,
+                         mtry = best_mtry,
+                         importance = TRUE)
 
 # Model summary
 print(rf_model)
