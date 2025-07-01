@@ -4,27 +4,68 @@ Depression is one of the most pressing — yet often hidden — challenges faced
 
 ---
 
-## 📊 Data & Model
+## 📦 Dataset Description
 
-The model is trained on **27,901 anonymized student records**, with features covering:
+- **Source:** [Kaggle - Student Depression Dataset](https://www.kaggle.com/datasets/adhilshamim/student-depression-dataset)
+- **Owner:** Adil Shamim
+- **Format:** CSV (each row = one student)
+- **Sample Size:** 27,901 student records
+- **Files Used:** `student_depression_dataset.csv`
+- **Target Variable:** `Depression` (Binary: 0 = No Depression, 1 = Depression)
+- **Key Features:**
+  - **Demographics:** Age, Gender, City
+  - **Academics:** CGPA, Academic Pressure, Degree
+  - **Lifestyle:** Sleep Duration, Dietary Habits, Work/Study Hours
+  - **Mental Health Indicators:** Suicidal thoughts, Financial stress, Family history
 
-- **Academic performance** (e.g., CGPA, academic pressure)  
-- **Lifestyle habits** (e.g., sleep hours, phone usage)  
-- **Mental health indicators** (e.g., suicidal thoughts, anxiety, family history of mental illness)
-
-We used a **Random Forest classifier**, chosen for its high accuracy (**83% on test data**) and interpretability. The `MeanDecreaseGini` scores provide transparency into which features most influence the model's predictions, helping educators and counselors build trust in the system.
-
-> **Note:** The dataset represents Indian student populations, which makes cultural context important. Future versions should validate across global populations for generalizability.
+This dataset was collected with ethical standards and privacy in mind. It is intended for research and mental health analysis in academic settings.
 
 ---
 
-## ⚙️ Features
+## 📊 Key Features of the Model
 
-- **Input Type:** Structured survey-like fields (non-invasive)  
-- **Model Type:** Random Forest (tuned `ntree=1000`, optimized `mtry`)  
-- **Accuracy:** ~83% test accuracy  
-- **Outputs:** Depression classification (`Yes` / `No`), feature importance scores  
-- **File:** `studep_rf_model.R` — includes preprocessing, model training, and evaluation  
+- **Academic Pressure**: Level of stress from academic workload
+- **Financial Stress**: Pressure due to financial difficulties
+- **Study Satisfaction**: Student’s contentment with academic environment
+- **Sleep Duration**: Average hours of sleep per day
+- **Suicidal Thoughts**: Self-reported suicidal ideation (Yes/No)
+- **CGPA**: Cumulative grade point average
+- **Work Pressure**: Stress from part-time jobs or academic duties
+- **Family History of Mental Illness**: Genetic predisposition (Yes/No)
+
+These features showed strong predictive power for identifying depressive symptoms in students during model training.
+
+---
+
+## 🧪 Model Performance
+
+| Model         | Accuracy |
+|---------------|----------|
+| Random Forest | 83.6%    |
+| XGBoost       | 85.0%    |
+
+> _Both models were trained on 80% of the data and validated on the remaining 20%._
+
+---
+
+## 🛠️ Model Revisions
+
+### 🔁 Week of June 30 – July 6, 2025
+- Switched from Random Forest to **XGBoost**
+- Added one-hot encoding for categorical variables
+- Introduced **early stopping** to avoid overfitting
+- Tuned hyperparameters: `max_depth = 6`, `eta = 0.03`
+- Improved test accuracy from **83.6% → 85.0%**
+
+This section is updated weekly to track changes in model design and performance.
+---
+
+## 💻 How to Use
+
+1. Clone this repository  
+2. Run the script (`studep_xgb_model.R`) in RStudio 
+3. Load the dataset or use your own  
+4. View predictions and performance metrics  
 
 ---
 
@@ -32,59 +73,58 @@ We used a **Random Forest classifier**, chosen for its high accuracy (**83% on t
 
 Visit this repository to:
 
-- 📁 Explore the model code and dataset  
-- 📉 View feature importance plots  
-- 🧪 Test the model using mock data  
+- 📁 Explore the latest XGBoost model and dataset  
+- 📉 View top predictive features (e.g., academic pressure, financial stress)  
+- 🧪 Test the model using mock or institutional data  
 - ⚙️ Access API-ready endpoints for integration (coming soon)  
-- 📘 Read about ethical considerations and limitations
+- 📘 Read about ethical considerations, dataset privacy, and limitations
 
 The project also includes:
 
-- Visual walkthroughs (feature plots, model logic diagrams)  
-- A quick-start notebook for institutions to test on local data  
-- Documentation with examples for R users
+- Visual walkthroughs (feature importance plots, confusion matrix, and performance logs)  
+- A quick-start `.R` script to run the model on your own data  
+- Clear documentation and examples for R users  
 
 ---
 
 ## 🎯 Use Cases
 
-- **Universities**: Integrate into wellness surveys or orientation sessions to flag at-risk students.
-- **Counselors**: Use as a decision-support tool alongside interviews.
-- **Researchers**: Study patterns of mental health in student populations.
-- **NGOs/Policy Makers**: Analyze trends in youth wellness and target resources effectively.
-
----
-
-## ✅ How to Use
-
-1. Clone this repository  
-2. Run `studep_rf_model.R` in RStudio  
-3. Use your own student dataset or the sample CSV provided  
-4. View predictions and feature insights  
+- **Universities**: Embed in wellness check-ins or orientation programs to identify at-risk students early.  
+- **Counselors**: Use predictions as supportive insight during counseling sessions.  
+- **Researchers**: Analyze depression trends and associated lifestyle or academic factors.  
+- **NGOs / Policy Makers**: Inform mental health program design for youth and student communities.
 
 ---
 
 ## ⚠️ Ethical Note
 
-This model is not a diagnostic tool. It is designed to **support and inform**, not to replace clinical evaluation. Use responsibly and ensure student privacy and consent are respected.
+This model is not a medical diagnostic tool. It supports early identification, not clinical diagnosis. Please ensure **student privacy**, **consent**, and **data security** are strictly upheld when deploying or analyzing results.
 
 ---
 
 ## 📎 Files Included
 
-| File | Description |
-|------|-------------|
-| `student_depression_dataset.csv` | Input dataset |
-| `studep_rf_model.R` | Model training + evaluation code |
-| `README.md` | Project overview and instructions |
+| File                     | Description                                             |
+|--------------------------|---------------------------------------------------------|
+| `student_depression_dataset.csv` | Cleaned and anonymized student dataset          |
+| `studep_xgb_model.R`             | Code for data preprocessing, XGBoost training, and evaluation |
+| `xgb_studep_model.model`         | Saved XGBoost model file                        |
+| `README.md`                      | Project overview, instructions, and documentation |
+
+---
+
+## 🙏 Acknowledgements
+
+Special thanks to **Adil Shamim** for compiling and sharing the dataset via Kaggle:  
+🔗 [Student Depression Dataset on Kaggle](https://www.kaggle.com/datasets/adhilshamim/student-depression-dataset)
 
 ---
 
 ## 📫 Contact
 
-For feedback, collaboration, or deployment support, reach out via GitHub or [gokulvaratharasan@gmail.com].
+For feedback, collaboration, or deployment support, reach out via:  
+🔗 [LinkedIn](https://www.linkedin.com/in/gokulv17/)
 
 ---
 
 > _Let’s make mental health support more proactive, data-driven, and compassionate._
-
