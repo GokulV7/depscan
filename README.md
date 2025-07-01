@@ -18,7 +18,7 @@ Depression is one of the most pressing — yet often hidden — challenges faced
   - **Lifestyle:** Sleep Duration, Dietary Habits, Work/Study Hours
   - **Mental Health Indicators:** Suicidal thoughts, Financial stress, Family history
 
-This dataset was collected with ethical standards and privacy in mind. It is intended for research and mental health analysis in academic settings.
+> **Note:** The dataset represents Indian student populations, which makes cultural context important. Future versions should validate across global populations for generalizability.
 
 ---
 
@@ -65,7 +65,7 @@ This section is updated weekly to track changes in model design and performance.
 1. Clone this repository  
 2. Run the script (`studep_xgb_model.R`) in RStudio 
 3. Load the dataset or use your own  
-4. View predictions and performance metrics  
+4. View predictions and performance metrics
 
 ---
 
