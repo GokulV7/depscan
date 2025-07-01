@@ -1,12 +1,12 @@
 # 🧠 DepScan: Student Depression Prediction Model
 
-Depression is one of the most pressing — yet often hidden — challenges faced by students today. **DepScan** is a machine learning model designed to detect potential depression in students based on academic, personal, and lifestyle indicators. Our goal is not to replace clinical intervention, but to **support early, proactive, and empathetic action** from educational institutions and healthcare providers.
+Depression is one of the most pressing - yet often hidden - challenges faced by students today. **DepScan** is a machine learning model designed to detect potential depression in students based on academic, personal, and lifestyle indicators. Our goal is not to replace clinical intervention, but to **support early, proactive, and empathetic action** from educational institutions and healthcare providers.
 
 ---
 
 ## 📦 Dataset Description
 
-- **Source:** [Kaggle - Student Depression Dataset](https://www.kaggle.com/datasets/adhilshamim/student-depression-dataset)
+- **Source:** [Kaggle - Student Depression Dataset](https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset)
 - **Owner:** Adil Shamim
 - **Format:** CSV (each row = one student)
 - **Sample Size:** 27,901 student records
@@ -57,7 +57,7 @@ These features showed strong predictive power for identifying depressive symptom
 - Tuned hyperparameters: `max_depth = 6`, `eta = 0.03`
 - Improved test accuracy from **83.6% → 85.0%**
 
-This section is updated weekly to track changes in model design and performance.
+> **Note:** This section is updated weekly to track changes in model design and performance.
 ---
 
 ## 💻 How to Use
@@ -116,7 +116,7 @@ This model is not a medical diagnostic tool. It supports early identification, n
 ## 🙏 Acknowledgements
 
 Special thanks to **Adil Shamim** for compiling and sharing the dataset via Kaggle:  
-🔗 [Student Depression Dataset on Kaggle](https://www.kaggle.com/datasets/adhilshamim/student-depression-dataset)
+🔗 [Student Depression Dataset on Kaggle](https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset)
 
 ---
 
