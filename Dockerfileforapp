@@ -1,0 +1,32 @@
+FROM rocker/r-base:latest
+
+WORKDIR /code
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libfontconfig1-dev \
+    libharfbuzz-dev \
+    libfribidi-dev \
+    libfreetype6-dev \
+    libpng-dev \
+    libtiff5-dev \
+    libjpeg-dev \
+    && rm -rf /var/lib/apt/lists/* 
+
+# Install only the R packages your app actually uses
+RUN install2.r --error \
+    shiny \
+    httr \
+    jsonlite \
+    flexdashboard \
+    shinydashboard \
+    shinyWidgets
+    
+COPY . .
+
+EXPOSE 7860
+
+CMD ["R", "--quiet", "-e", "shiny::runApp(host='0.0.0.0', port=7860)"]
