@@ -1,12 +1,3 @@
----
-title: DepScan - Student Depression Predictor
-emoji: 🧠
-colorFrom: blue
-colorTo: purple
-sdk: docker
-pinned: false
----
-
 # 🧠 DepScan: ML-Powered Student Depression Assessment Platform
 
 Depression is one of the most pressing - yet often hidden - challenges faced by students today. **DepScan** is a comprehensive machine learning platform that combines advanced XGBoost modeling with an intuitive web application to detect potential depression in students based on academic, personal, and lifestyle indicators. Our goal is not to replace clinical intervention, but to **support early, proactive, and empathetic action** from educational institutions and healthcare providers.
@@ -22,10 +13,11 @@ Depression is one of the most pressing - yet often hidden - challenges faced by 
 **🤖 API Endpoint:** [https://gokulv7-depressionpredictor.hf.space/__docs__/](https://gokulv7-depressionpredictor.hf.space/__docs__/)
 
 ### 📱 Quick Access QR Code
-```
-<img width="2000" height="2000" alt="bit ly_4kGZh3b" src="https://github.com/user-attachments/assets/80231690-e515-4f33-bad6-80f8d8588c4a" />
-```
-> Scan to access the DepScan web application directly on your mobile device
+<div align="center">
+  <img src="app_qr_code.png" alt="DepScan QR Code" width="200" height="200">
+  <br>
+  <em>Scan to access the DepScan web application directly on your mobile device</em>
+</div>
 
 ---
 
