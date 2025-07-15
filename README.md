@@ -56,8 +56,7 @@ Depression is one of the most pressing - yet often hidden - challenges faced by 
 ```
 Raw Data → Feature Engineering → XGBoost Training → Model Validation → API Deployment
 ```
-
-**Algorithm:** XGBoost (Extreme Gradient Boosting)
+## Algorithm: XGBoost (Extreme Gradient Boosting)
 - **Training Accuracy:** 86.5%
 - **Test Accuracy:** 84.3%
 - **Features:** 15 core variables (94 after encoding)
@@ -168,7 +167,7 @@ Response:
 | Version | Date | Key Changes |
 |---------|------|-------------|
 | v1.0 | June 2025 | Initial Random Forest model |
-| v2.0 | July 2025 | XGBoost implementation + hyperparameter tuning |
+| v2.0 | June 2025 | XGBoost implementation + hyperparameter tuning |
 | v3.0 | July 2025 | API deployment & comprehensive logging |
 | v3.1 | July 2025 | Shiny web application with modern UI |
 
