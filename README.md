@@ -6,9 +6,9 @@ Depression is one of the most pressing - yet often hidden - challenges faced by 
 
 ## 🌟 Live Application
 
-**🔗 Access DepScan here:** [[https://gokulv17.shinyapps.io/Depression-Scan/](https://huggingface.co/spaces/gokulv7/Depression-Scan)
+**🔗 Access DepScan here:** [https://huggingface.co/spaces/gokulv7/Depression-Scan](https://huggingface.co/spaces/gokulv7/Depression-Scan)
 
-**🔗 Short-URL for App:** [[https://gokulv17.shinyapps.io/Depression-Scan/](https://huggingface.co/spaces/gokulv7/Depression-Scan)
+**🔗 Short-URL for App:** [https://bit.ly/Depscan](https://bit.ly/Depscan)
 
 **🤖 API Endpoint:** [https://gokulv7-depressionpredictor.hf.space/__docs__/](https://gokulv7-depressionpredictor.hf.space/__docs__/)
 
